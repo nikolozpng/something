@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#efc442" />
+    <title>Task List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="todo" aria-labelledby="list-title">
+        <h1 id="list-title">Your tasks <span>(click &amp; hold to remove)</span></h1>
+        <ul id="task-list" class="task-list" aria-live="polite">
+          <li class="task is-done"><button class="task-toggle" type="button" aria-pressed="true"><span>Task number one</span><span class="check" aria-hidden="true">✓</span></button></li>
+          <li class="task"><button class="task-toggle" type="button" aria-pressed="false"><span>Second task</span><span class="check" aria-hidden="true">✓</span></button></li>
+          <li class="task"><button class="task-toggle" type="button" aria-pressed="false"><span>Third task</span><span class="check" aria-hidden="true">✓</span></button></li>
+          <li class="task"><button class="task-toggle" type="button" aria-pressed="false"><span>Task number four</span><span class="check" aria-hidden="true">✓</span></button></li>
+        </ul>
+        <form id="add-form" class="add-form">
+          <label class="sr-only" for="new-task">New task</label>
+          <input id="new-task" name="task" type="text" placeholder="+  add new task" autocomplete="off" maxlength="120" />
+          <button type="submit" aria-label="Add task">+</button>
+        </form>
+        <p class="hint">Click a task to mark it complete. Press and hold a task to remove it.</p>
+      </section>
+    </main>
+  </body>
+</html>
